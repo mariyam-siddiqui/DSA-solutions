@@ -1,6 +1,13 @@
 /*
+Given an array arr[] of N non-negative integers representing the height of blocks. If width of each block is 1, compute how much water can be trapped between the blocks during the rainy season. 
+ 
+Example 1:
 
-
+Input:
+N = 6
+arr[] = {3,0,0,2,0,4}
+Output:
+10
 
 For Input: 
 7
@@ -9,7 +16,7 @@ For Input:
 It's Correct output is: 
 4
 
-Practice here: */
+Practice here: https://practice.geeksforgeeks.org/problems/trapping-rain-water-1587115621/1 */
 
 /*one thing to note is -> the first and the last element of the array do not 
 help to hold the water and hence we exclude them from the logic.
@@ -33,7 +40,7 @@ class Solution{
         //THIS IS THE O(N^2) SOLUTION. 
         //the crux of the problem is to find the left and right max for the ith block
         //and then subtract the block's height to find the water that can be stored.
-        
+
         /*int lmax = arr[i];
         for (int i=1; i< n-1; i++)
         {
@@ -70,6 +77,6 @@ class Solution{
 
 
 int main(){
-    
+    //DRIVER CODE HERE
     return 0;
 }
