@@ -1,3 +1,12 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    
+    return 0;
+}
+
 class Solution{
     public:
     //Function to find median of the array elements.

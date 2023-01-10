@@ -75,10 +75,10 @@ class Solution{
         }
         return w;
     }
-}
+};
 
 
-int main(){
+void main(){
     //DRIVER CODE HERE
     return 0;
 }
