@@ -1,0 +1,50 @@
+/*practice here: */
+
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+
+class Solution
+{
+    public:
+    //Function to check if brackets are balanced or not.
+    
+    bool ispar(string x)
+    {
+        stack<char> s;
+        // Your code here
+        for(char ch : x)
+        {
+            if(ch == '(' || ch=='[' || ch =='{')
+            {
+                s.push(ch);
+            }
+            else
+            {
+                if(s.empty()==true)
+                {
+                    return false;
+                }
+                char top = s.top();
+                if(ch == ')' && top =='(' || ch == ']' && top =='[' || ch == '}' && top =='{' )
+                {
+                    s.pop();
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+        if(s.empty()) return true;
+        else return false;
+    }
+
+};
+
+int main(){
+    
+    /*driver code goes here*/
+    return 0;
+}

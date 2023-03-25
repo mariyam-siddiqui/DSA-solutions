@@ -1,0 +1,41 @@
+/*link for practice: https://practice.geeksforgeeks.org/problems/delete-middle-element-of-a-stack/1*/
+
+#include <iostream>
+using namespace std;
+
+class Solution
+{
+    public:
+    //Function to delete middle element of a stack.
+    void deleteMid(stack<int>&s, int sizeOfStack)
+    {
+        // code here.. 
+        int c = sizeOfStack;
+        int m = ceil((c+1)/2);
+        stack<int> st;
+        
+        while(s.empty() == false)
+        {
+            if(c==m)
+            {
+                s.pop();
+                break;
+            }
+            c--;
+            st.push(s.top());
+            s.pop();
+        }
+        while(st.empty()==false)
+        {
+            s.push(st.top());
+            st.pop();
+        }
+        
+    }
+};
+
+int main()
+{
+    //driver code here
+    return 0;
+}
