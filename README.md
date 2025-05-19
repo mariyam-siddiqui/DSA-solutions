@@ -1,7 +1,7 @@
 # DSA solutions
- This repository contains the DSA problems i have been solving along with the algorithms and solutions that worked for me.
+ This repository contains the DSA problems I have solved in order to get a better grasp of various coding paradigms.
 
- Solutions are written in C++ and have the main algorithm explained. 
+ Solutions are written in C++ or Python. 
 
- The code does not have a driver code.
+
  
