@@ -2,12 +2,20 @@ class Solution {
 public:
     vector<vector<string>> ans;
     vector<string> v;
-    bool isPal(string s)
+        bool isPal(string s,int start,int end)
     {
-        string temp = s;
-        reverse(s.begin(), s.end());
-        return temp == s;
+        while(start<=end)
+        {
+            if(s[start++] != s[end--]) return false;
+        }
+        return true;
     }
+    // bool isPal(string s)
+    // {
+    //     string temp = s;
+    //     reverse(s.begin(), s.end());
+    //     return temp == s;
+    // }
     void f(string s, int ind)
     {
         if(ind>=s.size())
@@ -20,7 +28,8 @@ public:
             // substr needs string and length
             // => length here would be i-index+1
             string temp = s.substr(ind, i-ind+1);
-            if( isPal(temp) )
+            // if( isPal(temp) )
+            if( isPal(s,ind,i) )
             {
                 v.push_back(temp);
                 f(s, i+1);
